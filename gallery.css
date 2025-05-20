@@ -1,0 +1,268 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+  }
+  
+  html, body {
+    height: 100%;
+    font-family: "Georgia", "Times New Roman", serif;
+    background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('tcgc.jpg');
+    background-size: cover;
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-attachment: fixed;
+    color: white;
+  }
+  
+
+ .logo {
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  font-size: 5%;
+}
+
+.logo-img {
+  width: 5%;
+  height: 5%;
+  border-radius: 50%;
+  margin-left: 3%;
+  object-fit: cover; /* ensures it crops nicely */
+}
+
+  /* Navbar */
+  .navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: linear-gradient(to right, #69c3fb, #225cb8, #6d34ce);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5% 5%;
+    z-index: 1000;
+  }
+
+
+  
+  .navbar ul li  {
+    list-style: none;
+    display: inline-block;
+    margin: 1%;
+    position: relative;
+}
+
+
+.navbar ul li a {
+    color: white;
+    text-decoration: none;
+    margin: 5%;
+    font-size: 100%;
+    transition: color 0.3s;
+}
+
+.navbar ul li::after {
+    content: '';
+    height: 3%;
+    width: 0;
+    background: white;
+    position: absolute;
+    left: 0;
+    bottom: -10%;
+    transition: 0.5s;
+
+}
+
+.navbar ul li:hover::after {
+    width:100%;
+}
+
+  
+  .logo {
+    font-size: 2vw;
+    font-weight: bold;
+    color: #fdfdfd;
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 5%;
+  }
+  
+  .nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2vw;
+    transition: color 0.3s ease;
+  }
+  
+  .nav-links a:hover {
+    color: #00ffe7;
+  }
+  
+  /* Section styling */
+  .section {
+    padding-top: 10%;
+    padding-bottom: 10%;
+    width: 90%;
+    margin: 0 auto;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  
+
+  
+  
+  
+
+  
+  /* Fade-in Animation */
+  .fade-in {
+  opacity: 0;
+  transform: translateY(10%);
+  animation: fadeInUp 1s forwards;
+}
+
+.fade-in.delay {
+  animation-delay: 0.5s;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+ .animate {
+    opacity: 0;
+    transform: translateY(50px); 
+    transition: opacity 1.5s ease-out, transform 1.5s ease-out;
+  }
+  
+ 
+  .slide-up {
+    transform: translateY(50px);
+  }
+  
+  .slide-left {
+    transform: translateX(-50px);
+  }
+  
+  .slide-right {
+    transform: translateX(50px);
+  }
+  
+  .animate.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+
+
+
+
+
+.image-container {
+  display: flex;
+  justify-content: center;
+}
+
+.image {
+  border-style: groove;
+  border-color: rgb(104, 212, 255);
+  border-radius: 5%;
+  border-width: 2%;
+}
+
+
+
+.paragraph {
+  max-width: 70%;         
+  margin: 0 auto;           
+  padding-top: 5%;  
+  padding-bottom: 1%;          
+  line-height: 1.6;         
+  font-size: 10%;          
+  text-align: justify;      
+  text-indent: 10%;
+}
+
+.day {
+            
+  padding-top: 12%; 
+  padding-bottom: 5%;        
+  font-size: 300%;          
+  text-align: center;
+}
+
+.last {
+    max-width: 70%;         
+  margin: 0 auto;           
+  padding-top: 5%;
+  padding-bottom: 10%;            
+  line-height: 1.6;         
+  font-size: 200%;          
+  text-align: justify;      
+  text-indent: 10%;
+}
+
+
+
+
+.site-footer {
+  background-color: #f0f0f0;
+  text-align: center;
+  padding: 20px 5%;
+  font-family: sans-serif;
+  border-top: 1px solid #ccc; 
+  background: linear-gradient(to right, #69c3fb, #225cb8, #6d34ce);
+
+}
+
+.footer-text {
+  font-size: 0.95rem;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.socials {
+  display: flex;
+  flex-direction: column; /* makes it vertical */
+  align-items: center;    /* center each item */
+  gap: 10px;              /* space between socials */
+}
+
+.socials div {
+  font-size: 80%;
+  color: #555;
+  background-color: #eaeaea;
+  padding: 1% 5%;          /* vertical, horizontal */
+  border-radius: 10% / 50%;  /* horizontal / vertical radius */
+  width: fit-content;
+}
+
+.two-columns {
+  display: flex;
+  justify-content: center;  /* Center the columns horizontally */
+  gap: 20%;                  /* Space between columns using percentage */
+  width: 75%;
+  margin: 0 auto;
+  font-size: 100%;
+  padding-bottom: 4%;
+}
+
+.column {
+  width: 45%;               /* Each column takes 45% of the container */
+  text-align: justify;      /* Optional: clean text alignment */
+}
+
+.gap {
+  gap: 1%;
+}
